@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--打包方式-->
+    <packaging>pom</packaging>
+
+    <!--父级-->
+    <!--jar包所在仓库路径-->
+    <groupId>com.cloud</groupId>
+    <!--模块名-->
+    <artifactId>spring-cloud</artifactId>
+    <!--版本号-->
+    <version>1.0</version>
+
+    <!--模块-->
+    <modules>
+        <module>api-model</module>
+        <module>api-service</module>
+        <module>api-consumer</module>
+        <module>api-eureka-a</module>
+        <module>api-eureka-b</module>
+        <module>api-eureka-c</module>
+    </modules>
+
+
+    <!--定义版本号-->
+    <properties>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+        <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
+        <mysql-version>5.1.47</mysql-version>
+        <druid-verion>1.1.10</druid-verion>
+        <spring-boot-starter-version>1.3.2</spring-boot-starter-version>
+        <junit-version>4.13.1</junit-version>
+        <lombok-version>1.18.8</lombok-version>
+        <log4j-version>1.2.17</log4j-version>
+        <logback-core-verion>1.2.3</logback-core-verion>
+    </properties>
+
+    <!--统一包管理-->
+    <dependencyManagement>
+        <dependencies>
+            <!--spring-cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring-boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid-verion}</version>
+            </dependency>
+            <!--spring-boot 启动器-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring-boot-starter-version}</version>
+            </dependency>
+            <!--junit-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit-version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
+            <!--log4j-->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback-core-verion}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--编译-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

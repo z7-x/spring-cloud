@@ -1,0 +1,7 @@
+# Project exclude paths
+/api-consumer/target/
+/api-eureka-a/target/
+/api-eureka-b/target/
+/api-eureka-c/target/
+/api-model/target/
+/api-service/target/

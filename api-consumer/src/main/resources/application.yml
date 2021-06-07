@@ -1,0 +1,8 @@
+# 服务端口
+server:
+  port: 8002
+
+#不同环境的配置文件选择
+spring:
+  application:
+    name: api-consumer

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 全局配置参数，需要时再设置 -->
+    <settings>
+        <!-- 开启二级缓存  默认值为true -->
+        <setting name="cacheEnabled" value="true"/>
+        <!---开启日志信息-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <typeAliases>
+        <!-- 别名配置 -->
+        <typeAlias alias="Dept" type="com.z7.springcloud.pojo.Dept"/>
+    </typeAliases>
+
+</configuration>

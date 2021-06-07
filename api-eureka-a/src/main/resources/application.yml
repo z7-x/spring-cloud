@@ -1,0 +1,21 @@
+# 服务端口
+server:
+  port: 8003
+
+#不同环境的配置文件选择
+spring:
+  application:
+    name: api-eureka-a
+
+# eureka配置
+eureka:
+  instance:
+    hostname: eureka8003.com # Eureka服务端的实例名称
+  client:
+    register-with-eureka: false # 表示是否向eureka注册中心注册自己
+    fetch-registry: false # 如果为false则表示自己为注册中心
+    service-url:  # 监控页面
+      # 单机  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      # 集群（关联）
+      defaultZone: http://eureka8004.com:8004/eureka/,http://eureka8005.com:8005/eureka/
+
