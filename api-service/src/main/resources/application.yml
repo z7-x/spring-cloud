@@ -27,8 +27,8 @@ eureka:
     service-url:  # 监控页面
       defaultZone: http://eureka8003.com:8003/eureka/
   instance:
-    instance-id: spring-cloud-api-server # 修改eureka上的默认描叙信息
+    instance-id: api-server # 修改eureka上的默认描叙信息
 # 完善注册服务信息
 info:
-  app.name: z7-spring-cloud
+  app.name: z7-spring-cloud-eureka
   author.name: z7-x

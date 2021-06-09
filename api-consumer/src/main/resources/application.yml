@@ -6,3 +6,10 @@ server:
 spring:
   application:
     name: api-consumer
+
+# eureka注册服务
+eureka:
+  client:
+    register-with-eureka: false # 表示是否向eureka注册中心注册自己
+    service-url:  # 监控页面
+      defaultZone: http://eureka8003.com:8003/eureka/,http://eureka8004.com:8004/eureka/,http://eureka8005.com:8005/eureka/

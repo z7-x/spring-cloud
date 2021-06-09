@@ -4,6 +4,7 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.z7.springcloud.pojo.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
 import javax.websocket.server.PathParam;
@@ -21,13 +22,15 @@ import java.util.List;
 public class ConsumerController {
 
     //服务方地址
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+//    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //ribbon 负载：根据服务名访问
+    private static final String REST_URL_PREFIX = "http://API-SERVICE";
 
     //理解：消费者不应该有service层
     //RestTemplate注册到Spring容器中
 
     @Autowired
-    private RestTemplate restTemplate;
+    private RestOperations restTemplate;
 
     @RequestMapping("/save")
     public Boolean saveDept(Dept dept) {

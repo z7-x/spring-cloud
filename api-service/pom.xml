@@ -24,6 +24,7 @@
             <artifactId>spring-cloud-starter-eureka</artifactId>
             <version>1.4.6.RELEASE</version>
         </dependency>
+
         <!--完善监控信息-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
