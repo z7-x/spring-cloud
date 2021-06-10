@@ -2,6 +2,7 @@ package com.z7.myrule;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import com.netflix.loadbalancer.RoundRobinRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,9 +16,15 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Z7Rule {
 
+    /**
+     * new RoundRobinRule():默认轮询规则
+     *
+     * @return
+     */
     @Bean
     public IRule myRule() {
         return new Z7RandomRule();
+
     }
 
 }

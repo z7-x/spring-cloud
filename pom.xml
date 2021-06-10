@@ -28,6 +28,7 @@
         <module>api-service-b</module>
         <module>api-service-c</module>
         <module>api-consumer-feign</module>
+        <module>api-service-hystrix</module>
     </modules>
 
 

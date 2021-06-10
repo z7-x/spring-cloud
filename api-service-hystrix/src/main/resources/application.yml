@@ -1,16 +1,16 @@
 # 服务端口
 server:
-  port: 8001
+  port: 8009
 
 #不同环境的配置文件选择
 spring:
   application:
-    name: api-service
+    name: api-service-hystrix
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.102.130.47:3306/springcloud?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    url: jdbc:mysql://47.102.130.47:3306/springcloud03?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
     username: root
     password: qwer1234
 
@@ -27,9 +27,10 @@ eureka:
     service-url:  # 监控页面
       defaultZone: http://eureka8003.com:8003/eureka/
   instance:
-    instance-id: api-server # 修改eureka上的默认描叙信息
+    instance-id: api-server-hystrix # 修改eureka上的默认描叙信息
     prefer-ip-address: true #显示ip地址
+
 # 完善注册服务信息
 info:
-  app.name: z7-spring-cloud-eureka
+  app.name: z7-spring-cloud-hystrix
   author.name: z7-x

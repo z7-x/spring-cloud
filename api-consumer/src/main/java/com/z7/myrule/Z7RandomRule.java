@@ -41,24 +41,24 @@ public class Z7RandomRule extends AbstractLoadBalancerRule {
                 return null;
             }
 
-//            //生成区间随机数
-//            int index = chooseRandomInt(serverCount);
-//            //从活着的服务生成随机数
-//            server = upList.get(index);
+            //生成区间随机数
+            int index = chooseRandomInt(serverCount);
+            //从活着的服务生成随机数
+            server = upList.get(index);
 
-            //==================================================
-            if (total < 5) {
-                server = upList.get(currentIndex);
-                total++;
-            } else {
-                total = 0;
-                currentIndex++;
-                if (currentIndex > upList.size()) {
-                    currentIndex = 0;
-                }
-                server = upList.get(currentIndex);
-            }
-            //==================================================
+//            //==================================================
+//            if (total < 5) {
+//                server = upList.get(currentIndex);
+//                total++;
+//            } else {
+//                total = 0;
+//                currentIndex++;
+//                if (currentIndex > upList.size()) {
+//                    currentIndex = 0;
+//                }
+//                server = upList.get(currentIndex);
+//            }
+//            //==================================================
 
 
             if (server == null) {
