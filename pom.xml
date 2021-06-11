@@ -19,6 +19,8 @@
         <module>api-model</module>
 
         <module>api-consumer</module>
+        <module>api-consumer-feign</module>
+        <module>api-consumer-hystrix-dashboard</module>
 
         <module>api-eureka-a</module>
         <module>api-eureka-b</module>
@@ -27,10 +29,8 @@
         <module>api-service</module>
         <module>api-service-b</module>
         <module>api-service-c</module>
-        <module>api-consumer-feign</module>
         <module>api-service-hystrix</module>
     </modules>
-
 
     <!--定义版本号-->
     <properties>

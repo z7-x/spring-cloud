@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.websocket.server.PathParam;
-
 
 /**
+ * 服务端：处理服务熔断
+ *
  * @ProjectName：z7-learn-projects
  * @ClassName：DeptController
  * @Description：TODO
